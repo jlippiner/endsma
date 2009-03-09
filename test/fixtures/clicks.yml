@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  referral: MyString
+  tags: MyString
+  ip_address: MyString
+  useragent: MyString
+
+two:
+  referral: MyString
+  tags: MyString
+  ip_address: MyString
+  useragent: MyString
