@@ -13,7 +13,7 @@
     </thead>
     <% @groups.each do |o| %>
       <tr>        
-        <td><%= o["referral"] %></td>
+        <td><%= !o["referral"].blank? ? o["referral"] : 'NONE'  %></td>
         <td><%= o["tags"] %></td>
         <td><%= o["Visits"] %></td>
       </tr>
@@ -33,7 +33,7 @@
     <% @output.each do |o| %>
       <tr>
         <td><%= o["created_at"].strftime("%m/%d/%y %H:%M:%S") %></td>
-        <td><%= o["referral"] %></td>
+        <td><%= !o["referral"].blank? ? o["referral"] : 'NONE'  %></td>
         <td><%= o["tags"] %></td>
         <td><%= o["ip_address"] %></td>
       </tr>
