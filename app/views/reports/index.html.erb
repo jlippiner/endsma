@@ -1,0 +1,66 @@
+<h1>EndSMA.com Reporting</h1>
+
+  <h2><%= "#{@output.size} Records Found" %></h2>
+
+  <b>Summary</b>
+  <table id="rptSummary" class="tablesorter">
+    <thead>
+      <tr>        
+        <th>Referral</th>
+        <th>Tags</th>
+        <th>Visits</th>
+      </tr>
+    </thead>
+    <% @groups.each do |o| %>
+      <tr>        
+        <td><%= o["referral"] %></td>
+        <td><%= o["tags"] %></td>
+        <td><%= o["Visits"] %></td>
+      </tr>
+    <% end %>
+  </table>
+
+  <b>Details</b>
+  <table id="rptTable" class="tablesorter">
+    <thead>
+      <tr>
+        <th>Visit Date</th>
+        <th>Referral</th>
+        <th>Tags</th>
+        <th>IP Address</th>
+      </tr>
+    </thead>
+    <% @output.each do |o| %>
+      <tr>
+        <td><%= o["created_at"].strftime("%m/%d/%y %H:%M:%S") %></td>
+        <td><%= o["referral"] %></td>
+        <td><%= o["tags"] %></td>
+        <td><%= o["ip_address"] %></td>
+      </tr>
+    <% end %>
+  </table>
+
+  <div id="pager" class="pager">
+	<form>
+		<img src="/images/first.png" class="first"/>
+		<img src="/images/prev.png" class="prev"/>
+		<input type="text" class="pagedisplay" size="4"/>
+		<img src="/images/next.png" class="next"/>
+		<img src="/images/last.png" class="last"/>
+		<select class="pagesize">
+			<option selected="selected"  value="10">10</option>
+
+			<option value="20">20</option>
+			<option value="30">30</option>
+			<option  value="40">40</option>
+		</select>
+	</form>
+</div>
+
+<script language="javascript">
+  $(document).ready(function(){
+     $("table")
+    .tablesorter({widthFixed: true, widgets: ['zebra']})
+    .tablesorterPager({container: $("#pager")}); 
+  })
+</script>

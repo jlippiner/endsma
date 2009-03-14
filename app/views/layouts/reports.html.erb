@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us">
+  <head>
+    <title>EndSMA.com Redirect Reporting</title>
+    <%= javascript_include_tag 'jquery-1.3.2.min', 'jquery.tablesorter.min', 'jquery.tablesorter.pager' %>
+    <style>
+      /* tables */
+      table.tablesorter {
+        font-family:arial;
+        background-color: #CDCDCD;
+        margin:10px 0pt 15px;
+        font-size: 8pt;
+        width: 100%;
+        text-align: left;
+      }
+      table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+        background-color: #e6EEEE;
+        border: 1px solid #FFF;
+        font-size: 8pt;
+        padding: 4px;
+      }
+      table.tablesorter thead tr .header {
+        background-image: url(bg.gif);
+        background-repeat: no-repeat;
+        background-position: center right;
+        cursor: pointer;
+      }
+      table.tablesorter tbody td {
+        color: #3D3D3D;
+        padding: 4px;
+        background-color: #FFF;
+        vertical-align: top;
+      }
+      table.tablesorter tbody tr.odd td {
+        background-color:#F0F0F6;
+      }
+      table.tablesorter thead tr .headerSortUp {
+        background-image: url(asc.gif);
+      }
+      table.tablesorter thead tr .headerSortDown {
+        background-image: url(desc.gif);
+      }
+      table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+        background-color: #8dbdd8;
+      }
+      .pager {
+        margin-top:10px;
+      }
+      .rptSummary {
+        margin-bottom:25px;
+      }
+    </style>
+  </head>
+  <body>
+    <%= yield  %>
+  </body>
+</html>
