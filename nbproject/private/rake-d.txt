@@ -66,7 +66,6 @@ rails\:update\:javascripts=Update your javascripts from your current rails insta
 rails\:update\:scripts=Add new scripts to the application script/ directory
 routes=Print out all defined routes in match order, with names.
 secret=Generate a crytographically secure secret key. This is typically used to generate a secret for cookie sessions.
-staging\:deploy=Push to Joyent staging environment
 stats=Report code statistics (KLOCs, etc) from the application
 test=Run all unit, functional and integration tests
 test\:benchmark=Run tests for benchmarkdb:test:prepare / Benchmark the performance tests
