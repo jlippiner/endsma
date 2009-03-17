@@ -41,7 +41,7 @@ ActionController::Routing::Routes.draw do |map|
   
   map.root :controller => "clicks", :action => "new"
   map.connect '/report', :controller => "reports", :action => "index"
-  map.change_dates  '/report/change_dates', :controller => "reports", :action => "change_dates"
+  map.export  '/report/export_to_csv', :controller => "reports", :action => "export_to_csv"
   map.connect '/:ref/:tags', :controller => "clicks", :action => "new", :tags => nil
 
 end
