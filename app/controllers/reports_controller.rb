@@ -3,8 +3,8 @@ class ReportsController < ApplicationController
 
   def index
     get_dates
-    @output = Clicks.find(:all, :order => "created_at DESC", :conditions => {:created_at => @sdate..@edate } )
-    @groups = Clicks.find_by_sql(["SELECT referral, tags, count(*) AS Visits FROM clicks WHERE created_at BETWEEN ? AND ? GROUP BY referral, tags ORDER BY count(*) DESC",@sdate,@edate])
+    @output = Clicks.find(:all, :order => "created_at DESC", :conditions => ["created_at >= ? AND created_at <= ?",@sdate,@edate] )
+    @groups = Clicks.find_by_sql(["SELECT referral, tags, count(*) AS Visits FROM clicks WHERE created_at >= ? AND created_at <= ? GROUP BY referral, tags ORDER BY count(*) DESC",@sdate,@edate])
 
     @options = ['Today','Yesterday','This Week','This Month','Last Month','Custom']
   end

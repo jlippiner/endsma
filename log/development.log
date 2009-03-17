@@ -18910,3 +18910,529 @@ ActionController::RoutingError (No route matches "/bg.gif" with {:method=>:get})
     /Users/joshua.lippiner/.gem/ruby/1.8/bin/rdebug-ide:19
 
 Rendering /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ReportsController#index (for 127.0.0.1 at 2009-03-17 15:09:52) [GET]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mClicks Load (1.2ms)[0m   [0mSELECT * FROM `clicks` WHERE (`clicks`.`created_at` BETWEEN '2009-03-16' AND '2009-03-16') ORDER BY created_at DESC[0m
+  [4;36;1mClicks Load (1.5ms)[0m   [0;1mSELECT referral, tags, count(*) AS Visits FROM clicks WHERE created_at BETWEEN '2009-03-16' AND '2009-03-16' GROUP BY referral, tags ORDER BY count(*) DESC[0m
+Rendering template within layouts/reports
+Rendering reports/index
+Completed in 23ms (View: 11, DB: 3) | 200 OK [http://localhost/report]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-17 15:09:52) [GET]
+
+
+ActionController::RoutingError (No route matches "/bg.gif" with {:method=>:get}):
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    ./script/server:3
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/ruby-debug-ide-0.3.1/lib/ruby-debug.rb:96:in `debug_load'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/ruby-debug-ide-0.3.1/lib/ruby-debug.rb:96:in `main'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/ruby-debug-ide-0.3.1/bin/rdebug-ide:76
+    /Users/joshua.lippiner/.gem/ruby/1.8/bin/rdebug-ide:19:in `load'
+    /Users/joshua.lippiner/.gem/ruby/1.8/bin/rdebug-ide:19
+
+Rendering /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ReportsController#index (for 127.0.0.1 at 2009-03-17 15:10:49) [GET]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mClicks Load (2.4ms)[0m   [0mSELECT * FROM `clicks` WHERE (`clicks`.`created_at` BETWEEN '2009-03-16' AND '2009-03-16') ORDER BY created_at DESC[0m
+  [4;36;1mClicks Load (1.8ms)[0m   [0;1mSELECT referral, tags, count(*) AS Visits FROM clicks WHERE created_at BETWEEN '2009-03-16' AND '2009-03-16' GROUP BY referral, tags ORDER BY count(*) DESC[0m
+Rendering template within layouts/reports
+Rendering reports/index
+Completed in 24ms (View: 12, DB: 5) | 200 OK [http://localhost/report]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-17 15:10:49) [GET]
+
+
+ActionController::RoutingError (No route matches "/bg.gif" with {:method=>:get}):
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    ./script/server:3
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/ruby-debug-ide-0.3.1/lib/ruby-debug.rb:96:in `debug_load'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/ruby-debug-ide-0.3.1/lib/ruby-debug.rb:96:in `main'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/ruby-debug-ide-0.3.1/bin/rdebug-ide:76
+    /Users/joshua.lippiner/.gem/ruby/1.8/bin/rdebug-ide:19:in `load'
+    /Users/joshua.lippiner/.gem/ruby/1.8/bin/rdebug-ide:19
+
+Rendering /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ReportsController#index (for 127.0.0.1 at 2009-03-17 15:10:52) [POST]
+  Parameters: {"authenticity_token"=>"a964d7d49dea413976b4e846645513e8dcd4a23c", "daterange"=>"Today", "sdate"=>"", "edate"=>""}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mClicks Load (0.4ms)[0m   [0mSELECT * FROM `clicks` WHERE (`clicks`.`created_at` BETWEEN '2009-03-17' AND '2009-03-17') ORDER BY created_at DESC[0m
+  [4;36;1mClicks Load (11.1ms)[0m   [0;1mSELECT referral, tags, count(*) AS Visits FROM clicks WHERE created_at BETWEEN '2009-03-17' AND '2009-03-17' GROUP BY referral, tags ORDER BY count(*) DESC[0m
+Rendering template within layouts/reports
+Rendering reports/index
+Completed in 32ms (View: 13, DB: 12) | 200 OK [http://localhost/report]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-17 15:10:53) [GET]
+
+
+ActionController::RoutingError (No route matches "/bg.gif" with {:method=>:get}):
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    ./script/server:3
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/ruby-debug-ide-0.3.1/lib/ruby-debug.rb:96:in `debug_load'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/ruby-debug-ide-0.3.1/lib/ruby-debug.rb:96:in `main'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/ruby-debug-ide-0.3.1/bin/rdebug-ide:76
+    /Users/joshua.lippiner/.gem/ruby/1.8/bin/rdebug-ide:19:in `load'
+    /Users/joshua.lippiner/.gem/ruby/1.8/bin/rdebug-ide:19
+
+Rendering /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ReportsController#index (for 127.0.0.1 at 2009-03-17 15:10:57) [POST]
+  Parameters: {"authenticity_token"=>"a964d7d49dea413976b4e846645513e8dcd4a23c", "daterange"=>"Yesterday", "sdate"=>"", "edate"=>""}
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mClicks Load (0.6ms)[0m   [0mSELECT * FROM `clicks` WHERE (`clicks`.`created_at` BETWEEN '2009-03-16' AND '2009-03-16') ORDER BY created_at DESC[0m
+  [4;36;1mClicks Load (4.9ms)[0m   [0;1mSELECT referral, tags, count(*) AS Visits FROM clicks WHERE created_at BETWEEN '2009-03-16' AND '2009-03-16' GROUP BY referral, tags ORDER BY count(*) DESC[0m
+Rendering template within layouts/reports
+Rendering reports/index
+Completed in 31ms (View: 17, DB: 6) | 200 OK [http://localhost/report]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-17 15:10:57) [GET]
+
+
+ActionController::RoutingError (No route matches "/bg.gif" with {:method=>:get}):
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    ./script/server:3
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/ruby-debug-ide-0.3.1/lib/ruby-debug.rb:96:in `debug_load'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/ruby-debug-ide-0.3.1/lib/ruby-debug.rb:96:in `main'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/ruby-debug-ide-0.3.1/bin/rdebug-ide:76
+    /Users/joshua.lippiner/.gem/ruby/1.8/bin/rdebug-ide:19:in `load'
+    /Users/joshua.lippiner/.gem/ruby/1.8/bin/rdebug-ide:19
+
+Rendering /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ReportsController#index (for 127.0.0.1 at 2009-03-17 15:10:58) [POST]
+  Parameters: {"authenticity_token"=>"a964d7d49dea413976b4e846645513e8dcd4a23c", "daterange"=>"Today", "sdate"=>"", "edate"=>""}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mClicks Load (0.4ms)[0m   [0mSELECT * FROM `clicks` WHERE (`clicks`.`created_at` BETWEEN '2009-03-17' AND '2009-03-17') ORDER BY created_at DESC[0m
+  [4;36;1mClicks Load (12.8ms)[0m   [0;1mSELECT referral, tags, count(*) AS Visits FROM clicks WHERE created_at BETWEEN '2009-03-17' AND '2009-03-17' GROUP BY referral, tags ORDER BY count(*) DESC[0m
+Rendering template within layouts/reports
+Rendering reports/index
+Completed in 37ms (View: 16, DB: 13) | 200 OK [http://localhost/report]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-17 15:10:58) [GET]
+
+
+ActionController::RoutingError (No route matches "/bg.gif" with {:method=>:get}):
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    ./script/server:3
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/ruby-debug-ide-0.3.1/lib/ruby-debug.rb:96:in `debug_load'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/ruby-debug-ide-0.3.1/lib/ruby-debug.rb:96:in `main'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/ruby-debug-ide-0.3.1/bin/rdebug-ide:76
+    /Users/joshua.lippiner/.gem/ruby/1.8/bin/rdebug-ide:19:in `load'
+    /Users/joshua.lippiner/.gem/ruby/1.8/bin/rdebug-ide:19
+
+Rendering /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ReportsController#index (for 127.0.0.1 at 2009-03-17 15:12:34) [POST]
+  Parameters: {"authenticity_token"=>"a964d7d49dea413976b4e846645513e8dcd4a23c", "daterange"=>"Today", "sdate"=>"", "edate"=>""}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mClicks Load (117.9ms)[0m   [0mSELECT * FROM `clicks` WHERE (created_at >= '2009-03-17' AND created_at <= '2009-03-17') ORDER BY created_at DESC[0m
+  [4;36;1mClicks Load (1.6ms)[0m   [0;1mSELECT referral, tags, count(*) AS Visits FROM clicks WHERE created_at >= '2009-03-17' AND created_at <= '2009-03-17' GROUP BY referral, tags ORDER BY count(*) DESC[0m
+Rendering template within layouts/reports
+Rendering reports/index
+Completed in 140ms (View: 11, DB: 120) | 200 OK [http://localhost/report]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-17 15:12:35) [GET]
+
+
+ActionController::RoutingError (No route matches "/bg.gif" with {:method=>:get}):
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    ./script/server:3
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/ruby-debug-ide-0.3.1/lib/ruby-debug.rb:96:in `debug_load'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/ruby-debug-ide-0.3.1/lib/ruby-debug.rb:96:in `main'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/ruby-debug-ide-0.3.1/bin/rdebug-ide:76
+    /Users/joshua.lippiner/.gem/ruby/1.8/bin/rdebug-ide:19:in `load'
+    /Users/joshua.lippiner/.gem/ruby/1.8/bin/rdebug-ide:19
+
+Rendering /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ReportsController#index (for 127.0.0.1 at 2009-03-17 15:12:39) [POST]
+  Parameters: {"authenticity_token"=>"a964d7d49dea413976b4e846645513e8dcd4a23c", "daterange"=>"Yesterday", "sdate"=>"", "edate"=>""}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mClicks Load (0.9ms)[0m   [0mSELECT * FROM `clicks` WHERE (created_at >= '2009-03-16' AND created_at <= '2009-03-16') ORDER BY created_at DESC[0m
+  [4;36;1mClicks Load (10.6ms)[0m   [0;1mSELECT referral, tags, count(*) AS Visits FROM clicks WHERE created_at >= '2009-03-16' AND created_at <= '2009-03-16' GROUP BY referral, tags ORDER BY count(*) DESC[0m
+Rendering template within layouts/reports
+Rendering reports/index
+Completed in 31ms (View: 13, DB: 12) | 200 OK [http://localhost/report]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-17 15:12:39) [GET]
+
+
+ActionController::RoutingError (No route matches "/bg.gif" with {:method=>:get}):
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    ./script/server:3
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/ruby-debug-ide-0.3.1/lib/ruby-debug.rb:96:in `debug_load'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/ruby-debug-ide-0.3.1/lib/ruby-debug.rb:96:in `main'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/ruby-debug-ide-0.3.1/bin/rdebug-ide:76
+    /Users/joshua.lippiner/.gem/ruby/1.8/bin/rdebug-ide:19:in `load'
+    /Users/joshua.lippiner/.gem/ruby/1.8/bin/rdebug-ide:19
+
+Rendering /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ReportsController#index (for 127.0.0.1 at 2009-03-17 15:12:41) [POST]
+  Parameters: {"authenticity_token"=>"a964d7d49dea413976b4e846645513e8dcd4a23c", "daterange"=>"Today", "sdate"=>"", "edate"=>""}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mClicks Load (0.6ms)[0m   [0mSELECT * FROM `clicks` WHERE (created_at >= '2009-03-17' AND created_at <= '2009-03-17') ORDER BY created_at DESC[0m
+  [4;36;1mClicks Load (10.6ms)[0m   [0;1mSELECT referral, tags, count(*) AS Visits FROM clicks WHERE created_at >= '2009-03-17' AND created_at <= '2009-03-17' GROUP BY referral, tags ORDER BY count(*) DESC[0m
+Rendering template within layouts/reports
+Rendering reports/index
+Completed in 33ms (View: 14, DB: 11) | 200 OK [http://localhost/report]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-17 15:12:41) [GET]
+
+
+ActionController::RoutingError (No route matches "/bg.gif" with {:method=>:get}):
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:142:in `load'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/rails-2.2.2/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    ./script/server:3
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/ruby-debug-ide-0.3.1/lib/ruby-debug.rb:96:in `debug_load'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/ruby-debug-ide-0.3.1/lib/ruby-debug.rb:96:in `main'
+    /Users/joshua.lippiner/.gem/ruby/1.8/gems/ruby-debug-ide-0.3.1/bin/rdebug-ide:76
+    /Users/joshua.lippiner/.gem/ruby/1.8/bin/rdebug-ide:19:in `load'
+    /Users/joshua.lippiner/.gem/ruby/1.8/bin/rdebug-ide:19
+
+Rendering /Users/joshua.lippiner/.gem/ruby/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
